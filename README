@@ -1,0 +1,31 @@
+            Checkout scripts for PHP's github mirror
+-----------------------------------------------------------------------            
+
+1. Purpose
+ PHP's version control system of choice is subversion, but we offer official
+ git mirrors at github.com. These mirrors were imported using git-svn.
+ If you want to use git and particularly git-svn to interact with PHP's subversion
+ repository we strongly recommend to use the github mirror intead of cloning
+ the svn.php.net directly.
+ 
+ The scripts provided in this repository will help you to clone the repositories
+ from github and reinitialize the metadata so that you can commit back to the svn
+ repository.
+ 
+2. Usage
+ To checkout the complete php-src tree containing PHP's source code and the Zend
+ Engine use the checkout-tree.sh shell script. An example would be:
+ 
+  $ checkout-tree php-src.git git://github.com/php/php-src
+ 
+ which will checkout the php-src repository at github into the php-src.git repository
+ and reinitialize the subversion metadata.
+ 
+ To checkout out a particular branch of the repository you can use the checkout-branch
+ script:
+  
+  $ checkout-branch php-5.3.git PHP_5_3 git://github.com/php/php-src
+ 
+3. Licensing
+ I don't care about the license, consider the stuff being licensed under the MIT License,
+ but you might buy me a beer if we meet.
