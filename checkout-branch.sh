@@ -36,5 +36,5 @@ echo "Directroy:  $DIR"
 echo "Branch:     $BRANCH"
 echo "Initialize..."
 
-echo (mkdir $DIR && cd $DIR && git init &&git remote add origin $REPOSITORY && git config remote.origin.fetch "refs/remotes/$BRANCH:refs/remotes/git-svn" && git fetch &&j
+(mkdir $DIR && cd $DIR && git init &&git remote add origin $REPOSITORY && git config remote.origin.fetch "refs/remotes/$BRANCH:refs/remotes/git-svn" && git fetch &&
 git checkout -b master remotes/$BRANCH && git svn init http://svn.php.net/repository/php/php-src/$URL_EXT && git svn rebase)
